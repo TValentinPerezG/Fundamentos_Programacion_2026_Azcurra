@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/* Ingresar un número entero y decir si:
-a) es par o impar.
-b) es mayor, menor o igual a cero. */
+/* Dada una fecha con año, mes y día, informar si es correcta o no. Solicitarle los
+datos al usuario de forma independiente. Considerar años bisiestos. */
 
 int main(){
     int num;

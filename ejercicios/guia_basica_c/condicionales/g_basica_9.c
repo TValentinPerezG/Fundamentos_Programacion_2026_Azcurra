@@ -2,32 +2,37 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/* Ingresar un número entero y decir si:
-a) es par o impar.
-b) es mayor, menor o igual a cero. */
+/* Solicitar al usuario el ingreso de una temperatura (puede tener decimales por
+ejemplo 24.5) y la unidad en la que se encuentra (siendo solo un carácter F ó C).
+Luego el programa debe mostrar la temperatura ingresada, convertida en la otra
+unidad.
+La relación entre temperaturas Celsius y Fahrenheit está dada por la fórmula:
+C=5.0 / 9.0 * (F − 32) */
 
-int main(){
-    int num;
-
-    printf("Ingrese un numero: ");
-    scanf("%d", &num);
-
-    if(num%2 == 0){
-        printf("El numero %d es par\n", num);
-    }
-    else{
-        printf("El numero %d es impar\n", num);
-    }
-
-    if(num == 0){
-        printf("El numero ingresado es 0\n", num);
-    }
-    else if(num > 0){
-        printf("El numero %d es mayor a 0\n", num);
-    }
-    else{
-        printf("El numero %d es menor a 0\n", num);
-    }
-
-    return 0;
+int main() {
+	float temp_actual, conversion;
+	char unidades;
+	
+	printf("\nIngrese C si es Celsius o F si es Fahrenheit: ");
+	scanf("%c", &unidades);
+	
+	printf("Ingrese una temperatura: ");
+	scanf("%f", &temp_actual);
+	
+	if(unidades == 'F'){
+		conversion = (temp_actual - 32) * 5 / 9;
+		printf("\nIngreso una temperatura en Fahrenheit, pasada a Celsius esta seria %f", conversion);
+	}
+	else if(unidades == 'C'){
+		conversion = (temp_actual * 9 / 5) + 32;
+		printf("\nIngreso una temperatura en Celsius, pasada a Fahrenheit esta seria %f", conversion);
+	}
+	else{
+		printf("\nNo se ingreso un caracter admisible.");
+	}
+	
+	printf("\n\nPrograma finalizado");
+	
+	
+	return 0;
 }

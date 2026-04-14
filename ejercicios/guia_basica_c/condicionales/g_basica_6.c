@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/* Ingresar un número entero y decir si:
-a) es par o impar.
-b) es mayor, menor o igual a cero. */
+/* Ingresar tres números y hallar el mayor.
+ */
 
 int main(){
     int num;

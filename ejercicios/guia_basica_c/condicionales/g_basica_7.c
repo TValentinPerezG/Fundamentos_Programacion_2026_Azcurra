@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/* Ingresar un número entero y decir si:
-a) es par o impar.
-b) es mayor, menor o igual a cero. */
+/* Ingresar un número (del 1 al 7) que representa un día de la semana, escribir el
+    nombre del día correspondiente. En el caso de haber ingresado un número fuera de
+    rango indicarle del error al usuario. */
 
 int main(){
     int num;

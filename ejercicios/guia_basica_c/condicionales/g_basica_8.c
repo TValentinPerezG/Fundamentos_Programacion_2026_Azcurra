@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/* Ingresar un número entero y decir si:
-a) es par o impar.
-b) es mayor, menor o igual a cero. */
+/* Ingresar un número (del 1 al 12) que representa un mes, indicar la cantidad de
+    días de dicho mes. */
 
 int main(){
     int num;
