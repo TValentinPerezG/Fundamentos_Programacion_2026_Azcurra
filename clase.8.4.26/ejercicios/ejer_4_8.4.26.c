@@ -10,7 +10,7 @@
     -1 para terminar*/
 
 int main(){
-	int casos, prom, acum_casos=0, i=0, cant_menor, cant_mayor;
+	int casos, prom, acum_casos=0, paises=0, cant_menor, cant_mayor;
     
     printf("Ingrese la cantidad de casos del pais: ");
     scanf("%d", &casos);
@@ -20,7 +20,7 @@ int main(){
 
     while(casos != -1){
         acum_casos = acum_casos + casos;
-        i++;
+        paises++;
 
         if(cant_menor > casos){
             cant_menor = casos;
@@ -33,11 +33,11 @@ int main(){
         scanf("%d", &casos);    
     }
     
-    if(i == 0){
+    if(paises == 0){
         printf("No se ingreso ningun caso\n");
     }
     else{
-        prom = acum_casos/i;
+        prom = acum_casos/paises;
 
         printf("El total de casos es: %i\n", acum_casos);
         printf("El promedio de casos por pais es: %i\n", prom);
