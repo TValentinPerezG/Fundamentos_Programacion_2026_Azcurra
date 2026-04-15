@@ -1,12 +1,12 @@
 ## Declaracion de Funciones Lenguaje C
-
+  
 ____
-
+  
 ### Metodologia a utilizar
-
-Programacion Estructurada
-Programacion Modular
-
+  
+Programacion Estructurada  
+Programacion Modular  
+  
 #### Debe cumplir las siguientes reglas:
 ##### En cuanto a diseño estructurado
 - Diseño Modular
@@ -27,42 +27,42 @@ Programacion Modular
 -  Reutilizacion del codigo, permieitiendo evitar codigo redundante, algo que se ve en el mal diseño.
 
 ###### Se conocia como programación sin GOTO 
-
+  
 ____
-
+  
 ### Representacion graficas de modulos
-
-Buscamos representar como van a ser nuestros modulos y como van a interactuar entre si, usualmente como cajas.
-
-Si tenemos por ejemplo 
-*----------------------*
-|                      |<---->Razon Social
-| Solicitar Ingreso    |<---->CUIL
-| Datos Clientes       |<---->Email
-|                      |
-*----------------------*
-Seria un modulo que reciba estos datos del usuario, y devolver a quien corresponda estos mismo datos.
-
-Otro caso podria ser una aplicacion que calcule deudas con datos recibidos.
-                    *----------------------*
-                    |                      |
-Deuda Actualizada<--| Solicitar Ingreso    |<----Importes Adeudados
-                    | Datos Clientes       |<----Tasa de Interes
-                    |                      |
-                    *----------------------*
-
-Un ejemplo mas seria un modulo que muestre datos con cierta estetica
-
-*----------------------*
-|                      |<----Razon Social
-| Solicitar Ingreso    |<----CUIL
-| Datos Clientes       |<----Email
-|                      |
-*----------------------*
-
-Todas estas presentaciones simplifican como vemos nuestro problema y su complejidad, permitiendonos llegar a la solucion de forma mas ordenada.
-
-Como resultado final llegariamos a un Diagrama completo, donde tenemos una gran cantidad de representaciones de distintas funcionalidades con un estilo top-down (diseño mas general a uno mas especifico, que se va dividiendo hasta llegar a una utilidad especifica)
+  
+Buscamos representar como van a ser nuestros modulos y como van a interactuar entre si, usualmente como cajas.  
+  
+Si tenemos por ejemplo   
+*----------------------*  
+|                      |<---->Razon Social  
+| Solicitar Ingreso    |<---->CUIL  
+| Datos Clientes       |<---->Email  
+|                      |  
+*----------------------*  
+Seria un modulo que reciba estos datos del usuario, y devolver a quien corresponda estos mismo datos.  
+  
+Otro caso podria ser una aplicacion que calcule deudas con datos recibidos.  
+                    *----------------------*  
+                    |                      |  
+Deuda Actualizada<--| Solicitar Ingreso    |<----Importes Adeudados  
+                    | Datos Clientes       |<----Tasa de Interes  
+                    |                      |  
+                    *----------------------*  
+  
+Un ejemplo mas seria un modulo que muestre datos con cierta estetica  
+  
+*----------------------*  
+|                      |<----Razon Social  
+| Solicitar Ingreso    |<----CUIL  
+| Datos Clientes       |<----Email  
+|                      |  
+*----------------------*  
+  
+Todas estas presentaciones simplifican como vemos nuestro problema y su complejidad, permitiendonos llegar a la solucion de forma mas ordenada.  
+  
+Como resultado final llegariamos a un Diagrama completo, donde tenemos una gran cantidad de representaciones de distintas funcionalidades con un estilo top-down (diseño mas general a uno mas especifico, que se va dividiendo hasta llegar a una utilidad especifica)  
 
 ____
 
@@ -77,22 +77,22 @@ ____
 - strcmp | Permite comparar 2 cadenas
 - strstr | Busco una cadena en otra cadena
 
-Todos estas son funciones que C ya trae y son usadas comunmente
+Todos estas son funciones que C ya trae y son usadas comunmente  
 
 
 ____
 
 ## Declaracion de Funciones en C
 
-El formato para declarar una funcion en C:
-*Tipo* A Devolver *Nombre* ( *Lista de Parametros Formales* )
-{
-    ..........................
-    .......................... <--- Bloque de codigo de la funcion
-    ..........................
+El formato para declarar una funcion en C:  
+*Tipo* A Devolver *Nombre* ( *Lista de Parametros Formales* )  
+{  
+    ..........................  
+    .......................... <--- Bloque de codigo de la funcion  
+    ..........................  
     
-    return *Valor a retornar* ----> Puede o no retornar valores, omitirse o retornar None
-}
+    return *Valor a retornar* ----> Puede o no retornar valores, omitirse o retornar None  
+}  
 
 ### Diferencia entre Formales y Actuales
 
@@ -101,7 +101,7 @@ El formato para declarar una funcion en C:
 
 #### Declarar Lista de Parametros Formales en ()
 
-[tipo] [*][identificador1], [tipo] [*][identificador2], ..., [tipo] [*][identificadorN]
+[tipo] ["*"][identificador1], [tipo] ["*"][identificador2], ..., [tipo] [*][identificadorN]
 
 ## Pasaje de Parametros
 
@@ -120,6 +120,26 @@ El formato para declarar una funcion en C:
 
 ____
 
+##  Ejemplo
+
+void leer_AB (int *a, int *b){
+    ................;
+    return
+}
+
+int main()
+{
+    int num1, num2;
+
+    leer_AB(&num1, &num2);
+}
+
+Si vieramos la memoria, las variables 
+
+
+
+____
+
 ##  Anotaciones de la clase
 
 #### Primero pensamos la solucion y diseño, y luego lo aplicamos en nuestro programa. Dividimos nuestro programa en problemas mas pequeños, y luego achicamos esos problemas mas pequeños, y asi sucesivamente, hasta llegar a una solucion especifica para ese problema en particular.
@@ -127,3 +147,5 @@ ____
 #### Generar codigo no redundante y evitar codigo que se repita constantemente en el programa.
 
 #### Se busca mejorar tiempos en los programas, en la construccion, depuracion, etc.
+
+#### Evitamos variables globales porque son malas practicas, cualquiera podria llamar sin querer variables declaradas por otros. Para evitar estos problemas, no se recomienda el uso de variables globales.
