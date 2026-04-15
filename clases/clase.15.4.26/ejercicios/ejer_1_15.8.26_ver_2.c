@@ -31,11 +31,10 @@ int factorial (int val1){
 int main(){
     int num1, factorizado;
     
-    printf("Ingrese un valor para sacar su factorial: ");
-    scanf("%d", &num1);
-
-    factorizado = factorial(num1);
-    printf("%d\n", factorizado);
+    printf("%d\n", factorizado = factorial(num1=-8));
+    printf("%d\n", factorizado = factorial(num1=1));
+    printf("%d\n", factorizado = factorial(num1=0));
+    printf("%d\n", factorizado = factorial(num1=5));
 
     return 0;
 }
