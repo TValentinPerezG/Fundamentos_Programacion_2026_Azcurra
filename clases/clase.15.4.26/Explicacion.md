@@ -138,7 +138,7 @@ Si vieramos la memoria, las variables num1 y a, num2 y b, estan todas compartien
 
 int calcular_C (int a, int b){  
     ................;  
-    return  
+    return;
 }  
   
 int main()  
@@ -153,7 +153,7 @@ int main()
     return(0);  
 }  
   
-
+Si vieramos la memoria en esta caso, a y b se guardan en un espacio temporal distinto a donde estan guardados los valores de num1 y num2, espacio que luego se libera al terminarse de usar la funcion donde se declaran estos 2.
 
 
 ____
