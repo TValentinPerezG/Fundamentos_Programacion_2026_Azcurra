@@ -35,30 +35,30 @@ ____
 Buscamos representar como van a ser nuestros modulos y como van a interactuar entre si, usualmente como cajas.  
   
 Si tenemos por ejemplo   
-*----------------------*  
+\*----------------------\*  
 |                      |<---->Razon Social  
 | Solicitar Ingreso    |<---->CUIL  
 | Datos Clientes       |<---->Email  
 |                      |  
-*----------------------*  
+\*----------------------\*  
 Seria un modulo que reciba estos datos del usuario, y devolver a quien corresponda estos mismo datos.  
   
 Otro caso podria ser una aplicacion que calcule deudas con datos recibidos.  
-                    *----------------------*  
+                    \*----------------------\*  
                     |                      |  
 Deuda Actualizada<--| Solicitar Ingreso    |<----Importes Adeudados  
                     | Datos Clientes       |<----Tasa de Interes  
                     |                      |  
-                    *----------------------*  
+                    \*----------------------\*  
   
 Un ejemplo mas seria un modulo que muestre datos con cierta estetica  
   
-*----------------------*  
+\*----------------------\*  
 |                      |<----Razon Social  
 | Solicitar Ingreso    |<----CUIL  
 | Datos Clientes       |<----Email  
 |                      |  
-*----------------------*  
+\*----------------------\*  
   
 Todas estas presentaciones simplifican como vemos nuestro problema y su complejidad, permitiendonos llegar a la solucion de forma mas ordenada.  
   
@@ -101,7 +101,7 @@ El formato para declarar una funcion en C:
 
 #### Declarar Lista de Parametros Formales en ()
 
-[tipo] ["*"][identificador1], [tipo] ["*"][identificador2], ..., [tipo] [*][identificadorN]
+[tipo] [\*][identificador1], [tipo] [\*][identificador2], ..., [tipo] [\*][identificadorN]
 
 ## Pasaje de Parametros
 
@@ -122,19 +122,37 @@ ____
 
 ##  Ejemplo
 
-void leer_AB (int *a, int *b){
-    ................;
-    return
-}
+void leer_AB (int *a, int *b){  
+    ................;  
+    return  
+}  
+  
+int main()  
+{  
+    int num1, num2;  
+    .............  
+    leer_AB(&num1, &num2);  
+}  
+  
+Si vieramos la memoria, las variables num1 y a, num2 y b, estan todas compartiendo el mismo espacio de memoria, y por lo tanto cualquier modificacion a estas tambien modificaran las variables iniciales.
 
-int main()
-{
-    int num1, num2;
-
-    leer_AB(&num1, &num2);
-}
-
-Si vieramos la memoria, las variables 
+int calcular_C (int a, int b){  
+    ................;  
+    return  
+}  
+  
+int main()  
+{  
+    int num1, num2;  
+    long resultado;  
+    ..........  
+    leer_AB(&num1, &num2);  
+    ..........  
+    resultado = calcular_C(num1, num2);  
+    ..........  
+    return(0);  
+}  
+  
 
 
 
