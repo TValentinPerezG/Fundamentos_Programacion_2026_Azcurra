@@ -39,8 +39,10 @@ bool num_primo(int num){
         while(primo && cont<num){
             if(num % cont == 0){
                 primo = false;
+                printf("Tiene un divisor mayor a 2, el num %i", num);
             } 
-            cont += 2;
+            cont += 1;
+            
         }
     }
 
