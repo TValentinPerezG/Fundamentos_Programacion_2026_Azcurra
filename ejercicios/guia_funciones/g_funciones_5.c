@@ -17,10 +17,60 @@ ii) a = -2 ; b = 3 ; resultado = 8
 iii) a = -2 ; b = 0 ; resultado = 1
 iv) a = -2 ; b = 0 ; resultado = 1 */
 
+double resultado_pot(int base, int pot){
+    int i = 1;
+    double resu_pote;
+
+    if(base > 0){
+        if(pot > 0){
+            resu_pote = base;
+            for(i;i<pot;i++){
+                resu_pote = resu_pote * base;
+            }
+        }
+        else if(pot == 0){
+            resu_pote = 1;
+        }
+        else{
+            resu_pote = ((double)1/base);
+
+            for(i;i<abs(pot);i++){
+                resu_pote = resu_pote * ((double)1 / base);
+            }
+        }
+    }
+    else if(base < 0){
+        if(pot > 0){
+            resu_pote = base;
+            for(i;i<pot;i++){
+                resu_pote = resu_pote * base;
+            }
+        }
+        else if(pot < 0){
+            resu_pote = ((double)1/base);
+
+            for(i;i<abs(pot);i++){
+                resu_pote = resu_pote * ((double)1 / base);
+            }
+        }
+    }
+
+    return resu_pote;
+}
+
 int main(){
+    int a, b;
+    double pot_a_b;
 
+    printf("Ingrese el valor del numero base: ");
+    scanf("%i", &a);
 
+    printf("Ingrese el valor al que se elevaba: ");
+    scanf("%i", &b);
 
+    pot_a_b = resultado_pot(a, b);
+
+    printf("\n%.2lf", pot_a_b);
 
     return 0;
 }

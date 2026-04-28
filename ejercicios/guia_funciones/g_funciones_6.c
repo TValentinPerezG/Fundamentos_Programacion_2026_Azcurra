@@ -6,7 +6,7 @@
 booleano que indique si el mismo es capicúa (palindromo). */
 
 int main(){
-
+    
 
 
 
