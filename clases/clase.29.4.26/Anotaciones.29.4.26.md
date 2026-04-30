@@ -253,5 +253,20 @@ ej:
 
 ----
 
+TIPOS DE FUNCIONES
+
 Una funcion es con tipo si su unico objetivo es devolver un valor   
 Si tiene objetivo de interactuar con el usuario o algo mas, ya debe ser un void  
+En las funciones tipadas (funcion que comienza con int, float, etc), tenemos que evitar que esta misma tenga mensajes y similares, son solo para devolver valores
+
+Funciones void (Procedimientos): Realiza una accion que no sea devolver un valor, reciben y devuelven parametros, si reciben A, devuelven A, quiza cambiado, pero devuelven ese mismo
+
+
+PASAJE DE PARAMETRO
+
+Por Valor:
+Pasamos una expresion, podemos pasar lo que queramos,
+Por referencia:
+Pasamos una variable, no podemos pasar un sistema de valores
+
+Asi, una es cerrada, y si por ejemplo, a la misma variable, A, en el primer caso, la llamo por valor, entonces si le doy de valor A=9, en el main no se le cambiara el valor. En cambio, si se envia por referencia y le damos a A=1, entonces estamos alterando directamente el valor de A.

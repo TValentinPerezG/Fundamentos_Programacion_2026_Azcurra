@@ -42,8 +42,15 @@ void main(){
     double Promedio;
 
     CargarNotas(vec, &ML, &acum);
-    Promedio = PromedioNotas(ML, acum);
-    MostrarMayorProm(vec, ML, Promedio);
+    if(ML == 0){
+        printf("No se ingresaron notas.");
+
+    }
+    else{
+        Promedio = PromedioNotas(ML, acum);
+        printf("El promedio es %.2lf\n", Promedio);
+        MostrarMayorProm(vec, ML, Promedio);        
+    }
 
     return;
 }
