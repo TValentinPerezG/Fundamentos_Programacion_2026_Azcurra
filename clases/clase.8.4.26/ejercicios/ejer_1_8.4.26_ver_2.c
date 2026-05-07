@@ -31,4 +31,6 @@ void main(){
     else{
         printf("El numero %d no es primo", N);
     }
+    
+    return;
 }

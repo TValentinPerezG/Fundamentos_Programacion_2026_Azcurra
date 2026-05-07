@@ -21,4 +21,6 @@ void main(){
     else{
         printf("El numero %d es primo", N);
     }
+
+    return;
 }
