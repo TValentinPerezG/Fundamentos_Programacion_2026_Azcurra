@@ -5,6 +5,8 @@ _____
 _____  
 
 ## General
+- #### Armar modelo de respuesta teorico antes de comenzar a escribir codigo
+- #### Intentar extenderse en cosas no pedidas por el ejercicio
 - #### Declarar las variables a usar al inicio de nuestro main
 - #### Los nombres de nuestras variables deben ser explicitos a lo que hacen, pero no demasiado extensas
 - #### No usar breaks fuera de los switch
@@ -12,6 +14,7 @@ _____
 - #### Tener cuidado de no utilizar variables globales
 - #### Evitar darle valor inicial a variables que no lo requieran
 - #### Darle valor inicial a variables que se usen en condiciones o cuentas para no usar basura
+- #### En el parcial, insertar las bibliotecas necesarias para el ejercicio
 
 
 ## Condicionales  
@@ -32,3 +35,7 @@ _____
 - #### Intentar separar tu programa en cada accion relevante para crear una funcion por cada accion, haciendolas reusables
 - #### No hacer cuentas o condicionales innecesarias en funciones int o booleanas, puede hacer la condicion en el return
 
+## Arreglos
+- #### Declarar siempre el valor de maximo fisico en un typedef de nuestro vector/matriz
+- #### En matrices, distinguir si este caso es de while-while, for-for, while-for o for-while segun la consigna
+- #### Revisar si conviene revisar el arreglo de inicio a final o de final a inicio
