@@ -57,3 +57,10 @@ _____
 - #### Parametros de FILEs siempre en el main, no dentro de la funcion.
 - #### Abrir y cerrar los fclose y fopen en el misma lugar, ambos en la funcion, ambos en el main, etc.
 - #### Para archivos de texto usar para la carga mayormente fprintf
+
+## Memoria Dinamica
+- #### Si tengo una memoria reservada con malloc, calloc o relloc, siempre ponerle un free luego en algun momento en cuanto se sabe que ya no se utilizaran.
+- #### No hacer 2 frees del mismo espacio para no bloquear este espacio.
+- #### Utilizar el sizeof para determinar el tamaño de una estructura.
+- #### Cuando se utiliza malloc, validar que el puntero no sea Null, y poner un else para este caso.
+- #### No hacer referencia a una memoria ya liberada por un free.
