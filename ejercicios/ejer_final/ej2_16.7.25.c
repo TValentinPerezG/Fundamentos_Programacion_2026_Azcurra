@@ -6,3 +6,39 @@ Invoque a la funcion utilizando como arreglo la siguiente declaracion: nombre = 
 Haga una llamada a la funcion mostrar_estructura_dinamica a la que se le debe pasar la estructura y la correspondiente cantidad de elementos a mostrar. No tenes que desarrollar 
 esta funcion, solo utilizarla adecuadamente. Solo se puede invocar esta funcion si el puntero no es nulo.
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+    int legajo;
+    char nombre[50];
+}t_alumno;
+
+t_alumno *crear_estructura_dinamica(char nom[], int legaj){
+    t_alumno *datos = malloc(sizeof(t_alumno));
+
+    if(datos != NULL){
+        strcpy(datos->nombre,nom);
+        datos->legajo = legaj;
+    }
+
+    return datos;
+}
+
+int main(){
+    int legajo=111111;
+    char nombre[50] = 'Pepe';
+    t_alumno *datos;
+
+    datos = crear_estructura_dinamica(nombre, legajo);
+
+    if(datos != NULL){
+        mostrar_estructura_dinamica(datos, 1);
+    }
+
+    free(datos);
+
+    return 0;
+}
