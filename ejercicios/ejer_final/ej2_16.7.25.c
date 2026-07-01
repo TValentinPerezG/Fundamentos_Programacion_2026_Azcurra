@@ -16,10 +16,12 @@ typedef struct{
     char nombre[50];
 }t_alumno;
 
+//acordarse de poner el asterisco cuando se van a enviar estos por la funcion
 t_alumno *crear_estructura_dinamica(char nom[], int legaj){
     t_alumno *datos = malloc(sizeof(t_alumno));
 
     if(datos != NULL){
+        //copia strings. Acordarse de la flecha para los structs
         strcpy(datos->nombre,nom);
         datos->legajo = legaj;
     }
